@@ -1,44 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_handle.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/23 13:47:05 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/04 14:25:35 by tiagalex         ###   ########.fr       */
+/*   Created: 2025/01/03 15:04:56 by tiagalex          #+#    #+#             */
+/*   Updated: 2025/01/04 15:54:23 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_handle(va_list args, char type)
 {
-	int	i;
-	int j;
-	va_list	args;
-	va_start(args, format);
+	int i;
 
 	i = 0;
-	j = 0;
-	while(format[i] != '\0')
-	{
-		if (format[i] == '%' && format[i + 1] != '\0')
-		{
-			j = j + ft_handle(args, format[i + 1]);
-			i++;
-		}
-		else
-			ft_putchar_fd(format[i], 1);
-			j++;
-		i++;
-	}
-	va_end(args);
-	return(j);
-}
-
-int	main()
-{
-	ft_printf("alguma coisa");
-	return (0);
+	if (type == 'c')
+		return (ft_putchar(va_arg(args, char)));
+	if (type == 's')
+		return (ft_putstr(va_arg(args, char *)));
+	if (type == 'p')
+		return (ft_puthex(va_arg(args, void *), type));
+	if (type == 'x')
+		return (ft_puthex(va_arg(args, void *), type));
+	if (type == 'X')
+		return (ft_puthex(va_arg(args, void *), type));
 }

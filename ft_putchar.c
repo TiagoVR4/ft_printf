@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/03 14:14:05 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/04 15:27:18 by tiagalex         ###   ########.fr       */
+/*   Created: 2025/01/03 14:28:19 by tiagalex          #+#    #+#             */
+/*   Updated: 2025/01/03 14:29:52 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
-
-# include <stdarg.h>
-# include <unistd.h>
-
-// Funtions
-int	ft_printf(const char *format, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_puthex(unsigned int n, char type);
-
-size_t	ft_strlen(const char * str);
-
-#endif
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

@@ -1,9 +1,10 @@
 NAME = libft.a
 
 CC	= cc
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-SRC	=  ft_printf.c ft_putchar_fd.c
+SRC	=	ft_printf.c ft_putchar.c ft_putstr.c ft_strlen \
+		ft_puthex.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_puthex_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/03 14:14:05 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/04 15:27:18 by tiagalex         ###   ########.fr       */
+/*   Created: 2025/01/04 16:24:11 by tiagalex          #+#    #+#             */
+/*   Updated: 2025/01/04 16:30:19 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+int	ft_puthex_ptr(void *n, char	type)
+{
+	unsigned long	address;
 
-# include <stdarg.h>
-# include <unistd.h>
-
-// Funtions
-int	ft_printf(const char *format, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_puthex(unsigned int n, char type);
-
-size_t	ft_strlen(const char * str);
-
-#endif
+	address = (unsigned long)n;
+	write(1, "0x", 2);
+	if (address == 0)
+	{
+		write(1, "0", 1);
+		return ;
+	}
+	hexlower(address);
+}
