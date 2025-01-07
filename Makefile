@@ -1,10 +1,10 @@
-NAME = libft.a
+NAME = libftprintf.a
 
 CC	= cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC	=	ft_printf.c ft_putchar.c ft_putstr.c ft_strlen \
-		ft_puthex.c
+SRC	=	ft_printf.c  ft_handle.c ft_putchar.c ft_putstr.c ft_strlen.c \
+		ft_puthex.c ft_putptr.c ft_putnbr.c ft_unsigned_putnbr.c
 
 OBJ = $(SRC:.c=.o)
 

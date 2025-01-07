@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:28:19 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/03 14:29:52 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:17:44 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar(int c)
 {
-	write(fd, &c, 1);
+	write(1, &c, 1);
+	return (1);
 }
