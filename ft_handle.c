@@ -6,7 +6,7 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:04:56 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/07 14:20:37 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/08 15:44:31 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_handle(va_list args, char type)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (type == 'c')

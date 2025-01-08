@@ -6,7 +6,7 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 13:47:05 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/07 15:46:40 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/08 15:41:59 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_printf(const char *format, ...)
 {
-	int	i;
-	int count;
+	int		i;
+	int		count;
 	va_list	args;
-	va_start(args, format);
 
+	va_start(args, format);
 	i = 0;
 	count = 0;
-	while(format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
@@ -33,5 +33,5 @@ int	ft_printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-	return(count);
+	return (count);
 }

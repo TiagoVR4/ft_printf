@@ -6,20 +6,19 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 13:05:44 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/07 15:22:48 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/08 15:49:45 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-
-static int	hexlower(unsigned int n)
+static int	hexlower(unsigned long long n)
 {
-	char	base[] = "0123456789abcdef";
+	char	*base;
 	char	buffer[16];
+	int		i;
 
-	int i;
-
+	*base = "0123456789abcdef";
 	i = 0;
 	if (n == 0)
 	{
@@ -37,13 +36,13 @@ static int	hexlower(unsigned int n)
 	return (i + 1);
 }
 
-static int	hexupper(unsigned int n)
+static int	hexupper(unsigned long long n)
 {
-	char	base[] = "0123456789ABCDEF";
+	char	*base;
 	char	buffer[16];
+	int		i;
 
-	int i;
-
+	*base = "0123456789ABCDEF";
 	i = 0;
 	if (n == 0)
 	{
@@ -60,14 +59,30 @@ static int	hexupper(unsigned int n)
 		write (1, &buffer[i], 1);
 	return (i + 1);
 }
-int	ft_puthex(unsigned int n, char type)
+
+static int	count_hex(unsigned long long n)
 {
 	int	i;
-	
+
+	i = 0;
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		i++;
+		n = n / 16;
+	}
+	return (i);
+}
+
+int	ft_puthex(unsigned long long n, char type)
+{
+	int	i;
+
 	i = 0;
 	if (type == 'x')
 		i = hexlower(n);
-	if (type == 'X')
+	else if (type == 'X')
 		i = hexupper(n);
-	return (i);
+	return (count_hex(n));
 }

@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_unsigned_putnbr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 13:02:40 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/08 15:44:48 by tiagalex         ###   ########.fr       */
+/*   Created: 2025/01/07 12:23:04 by tiagalex          #+#    #+#             */
+/*   Updated: 2025/01/08 15:50:43 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_unsigned_putnbr(unsigned int n)
 {
-	int	i;
+	unsigned long	nb;
+	int				i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
+	nb = n;
+	if (nb >= 10)
+	{
+		i += ft_unsigned_putnbr(nb / 10);
+	}
+	ft_putchar(nb % 10 + 48);
+	i++;
 	return (i);
 }
