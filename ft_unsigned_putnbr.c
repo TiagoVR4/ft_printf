@@ -6,11 +6,11 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:23:04 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/08 15:50:43 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/09 14:01:44 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_unsigned_putnbr(unsigned int n)
 {

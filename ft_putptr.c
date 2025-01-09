@@ -6,11 +6,11 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:24:11 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/08 15:50:15 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/09 14:01:26 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putptr(void *n)
 {

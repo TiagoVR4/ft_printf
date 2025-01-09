@@ -6,11 +6,11 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:04:56 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/08 15:44:31 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/09 14:02:24 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_handle(va_list args, char type)
 {
