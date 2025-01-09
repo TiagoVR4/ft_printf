@@ -6,7 +6,7 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:14:05 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/09 11:41:23 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/09 12:19:34 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,5 @@ int		ft_handle(va_list args, char type);
 
 size_t	ft_strlen(const char *str);
 
-void ft_strcpy(char *dest, const char *src);
-
-
+void	*ft_memcpy(void *dest, const void *src, size_t len);
 #endif

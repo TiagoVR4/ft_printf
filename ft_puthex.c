@@ -6,7 +6,7 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 13:05:44 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/09 11:34:52 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/09 12:38:42 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	hexlower(unsigned long long n)
 	int		i;
 
 	i = 0;
-	ft_strcpy(base, "0123456789abcdef");
+	ft_memcpy(base, "0123456789abcdef", 17);
 	if (n == 0)
 	{
 		write(1, "0", 1);
@@ -43,7 +43,7 @@ static int	hexupper(unsigned long long n)
 	int		i;
 
 	i = 0;
-	ft_strcpy(base, "0123456789ABCDEF");
+	ft_memcpy(base, "0123456789ABCDEF", 17);
 	if (n == 0)
 	{
 		write(1, "0", 1);
