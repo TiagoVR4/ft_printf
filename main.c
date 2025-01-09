@@ -6,7 +6,7 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:40:07 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/08 15:32:27 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/09 11:54:34 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,8 +256,8 @@ int main(void)
 	ft_printf("------------%%d------------\n");
 	ft_printf("POSITIVE NUMBERS----------\n");
 	int nbr_pos = 42;
-	output_system = printf("system -> %d\n", nbr_pos);
-	output_ft_printf = ft_printf("My ft_printf -> %d\n", nbr_pos);
+	output_system = printf("SY -> %d\n", nbr_pos);
+	output_ft_printf = ft_printf("FT -> %d\n", nbr_pos);
 	printf("OUTPUT system = %d\n", output_system);
 	ft_printf("OUTPUT My ft_printf = %d\n", output_ft_printf);
 

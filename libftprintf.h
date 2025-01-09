@@ -6,7 +6,7 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:14:05 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/08 15:43:58 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/09 11:41:23 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stddef.h>
 
 // Funtions
 int		ft_printf(const char *format, ...);
@@ -25,6 +26,10 @@ int		ft_putptr(void *n);
 int		ft_putnbr(int n);
 int		ft_unsigned_putnbr(unsigned int n);
 int		ft_handle(va_list args, char type);
+
 size_t	ft_strlen(const char *str);
+
+void ft_strcpy(char *dest, const char *src);
+
 
 #endif
