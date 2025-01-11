@@ -29,5 +29,4 @@ int		ft_handle(va_list args, char type);
 
 size_t	ft_strlen(const char *str);
 
-void	*ft_memcpy(void *dest, const void *src, size_t len);
 #endif

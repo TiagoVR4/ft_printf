@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 13:05:44 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/09 14:01:20 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/11 19:55:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 static int	hexlower(unsigned long long n)
 {
-	char	base[17];
+	char	*base;
 	char	buffer[16];
 	int		i;
+	int		j;
 
 	i = 0;
-	ft_memcpy(base, "0123456789abcdef", 17);
+	j = 0;
+	base = "0123456789abcdef";
 	if (n == 0)
 	{
 		write(1, "0", 1);
@@ -31,19 +33,22 @@ static int	hexlower(unsigned long long n)
 		n /= 16;
 		i++;
 	}
+	j = i;
 	while (i-- > 0)
 		write (1, &buffer[i], 1);
-	return (i + 1);
+	return (j);
 }
 
 static int	hexupper(unsigned long long n)
 {
-	char	base[17];
+	char	*base;
 	char	buffer[16];
 	int		i;
+	int		j;
 
 	i = 0;
-	ft_memcpy(base, "0123456789ABCDEF", 17);
+	j = 0;
+	base = "0123456789ABCDEF";
 	if (n == 0)
 	{
 		write(1, "0", 1);
@@ -55,11 +60,12 @@ static int	hexupper(unsigned long long n)
 		n /= 16;
 		i++;
 	}
+	j = i;
 	while (i-- > 0)
 		write (1, &buffer[i], 1);
-	return (i + 1);
+	return (j);
 }
-
+/* 
 static int	count_hex(unsigned long long n)
 {
 	int	i;
@@ -73,7 +79,7 @@ static int	count_hex(unsigned long long n)
 		n = n / 16;
 	}
 	return (i);
-}
+} */
 
 int	ft_puthex(unsigned long long n, char type)
 {
@@ -84,5 +90,5 @@ int	ft_puthex(unsigned long long n, char type)
 		i = hexlower(n);
 	else if (type == 'X')
 		i = hexupper(n);
-	return (count_hex(n));
+	return (i);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_handle.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:04:56 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/09 14:16:49 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/01/11 19:41:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 int	ft_handle(va_list args, char type)
 {
-	int	i;
-
-	i = 0;
 	if (type == 'c')
 		return (ft_putchar(va_arg(args, int)));
 	else if (type == 's')
