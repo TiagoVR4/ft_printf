@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 13:05:44 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/11 19:55:37 by marvin           ###   ########.fr       */
+/*   Updated: 2025/01/12 18:03:36 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,21 +65,6 @@ static int	hexupper(unsigned long long n)
 		write (1, &buffer[i], 1);
 	return (j);
 }
-/* 
-static int	count_hex(unsigned long long n)
-{
-	int	i;
-
-	i = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
-	{
-		i++;
-		n = n / 16;
-	}
-	return (i);
-} */
 
 int	ft_puthex(unsigned long long n, char type)
 {
