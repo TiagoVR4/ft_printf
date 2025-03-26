@@ -6,11 +6,11 @@
 /*   By: tiagalex <tiagalex@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:40:07 by tiagalex          #+#    #+#             */
-/*   Updated: 2025/01/09 14:01:51 by tiagalex         ###   ########.fr       */
+/*   Updated: 2025/03/26 12:13:28 by tiagalex         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+/* 
 #include "ft_printf.h"
 #include <limits.h>
 #include <stdio.h>
@@ -676,4 +676,4 @@ int main(void)
 	ft_printf("\n");
 
 	return (0);
-}
+} */
